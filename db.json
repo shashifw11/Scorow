@@ -1,18 +1,5 @@
 {
   "product": [
-    {
-      "product": {
-        "Name": "shashi",
-        "Discription": "kumar",
-        "Category": "food"
-      },
-      "listfile": [
-        {},
-        {},
-        {},
-        {}
-      ],
-      "id": 1
-    }
+    
   ]
 }

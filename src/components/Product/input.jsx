@@ -41,15 +41,22 @@ const Input = () => {
                 },
              }) 
              const result = await res.json() ; 
-               console.log(result);
+               console.log(result); 
+               clearinput()
+               clearFile() ; 
          }catch(err){
                console.log(err.message) ; 
          }
           
      }
+
+     const clearinput = ()=>{
+      // handleChange(0) ; 
+     }
    
  const clearFile = ()=>{
       setListFile([]);
+     
     }
 
     
