@@ -3,7 +3,7 @@ import { ImageConfig } from '../../configs/imageConfig'
 
 import uploadImg from "../../assets/cloud-upload-regular-240.png" ; 
 
-const Dragdrop = ({onFileChange , uploadFile}) => {
+const Dragdrop = ({onFileChange , handleChange}) => {
   const wrapperRef = useRef(null) ;  
 
   const [fileList , setFileList] = useState([]) ; 
@@ -13,14 +13,13 @@ const Dragdrop = ({onFileChange , uploadFile}) => {
   const onDrop = () => wrapperRef.current.classList.remove('dragover') ; 
   
      const onFileDrop = (e)=>{
-            const newFile = e.target.files[0] ; 
+          const newFile = e.target.files[0] ; 
             if(newFile){
               const updateList = [...fileList , newFile ] ; 
               setFileList(updateList)
-              onFileChange(updateList) ;
-            } 
-           
-     } 
+               onFileChange(updateList) ;
+             } 
+        } 
     
 
   return (
@@ -34,9 +33,10 @@ const Dragdrop = ({onFileChange , uploadFile}) => {
       <div className = "drop-file-input-label">
      
         <img className = "drag-image" src = {uploadImg}  atl = ""/>
-        <p>Drag & Drop your files here</p>
+        <p>Click or drag file to this area to upload</p>
+        <p>Support for a single or bulk upload</p>
       </div>
-       <input type = "file"  value = "" onChange = {onFileDrop}/>
+       <input type = "file" name = "file" value = ""  onChange = {onFileDrop}/>
        
     </div>
   )

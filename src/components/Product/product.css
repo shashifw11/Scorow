@@ -8,7 +8,7 @@
     justify-content: space-between;
     gap : 1rem ; 
     align-items: center;
-    padding : 1rem ; 
+    padding : .5rem ; 
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
@@ -55,7 +55,7 @@
     color : #fff ; 
     top : 0 ; 
     left : 0; 
-    height : 100vh ; 
+    height : 115vh ; 
     width  : 230px ; 
     transform: translate(-100%);
     transition : all 0.4s;
@@ -65,7 +65,7 @@
     transform: translate(0%);
 }
 .sidebar li:nth-child(1){
-    padding : 1.5rem 2rem ; 
+    padding : 1rem 2rem ; 
     font-weight: 600;
 }
 
@@ -101,23 +101,30 @@
 
 
 .form-container{
-    width : 70% ; 
-    margin-left: 18%;
+    width : 60% ; 
+    margin-left: 20%;
     /* border : 1px solid red  ;  */
-    height : 500px ; 
+    height : 480px ; 
 }
 
 .input-field{
     width : 50%;
-    height : 220px ;  
+    height : 240px ;  
     margin :left ;
     /* border : 1px solid red ;  */
 } 
+.input-field p{
+    width : 90%  ; 
+    margin : 15px ; 
+    font-weight: 700;
+    opacity: 0.6;
+    /* border : 1px solid red ;  */
+}
 
 .input-field input{
     width : 90% ;  
     padding : 12px ; 
-    margin: 15px ; 
+    margin: 10px ; 
     border-radius : 5px ; 
     border : 2px solid gainsboro ; 
 } 
@@ -125,14 +132,16 @@
 .input-field select{
     width : 90% ; 
     padding : 12px ; 
-    margin: 15px;
+    margin: 10px;
     border-radius : 5px ;
     border : 2px solid gainsboro ; 
+
 }
 
 .drag-box-container{
     width : 100% ; 
-    height : 280px ; 
+    height : 260px ; 
+    
     border : 1px solid  gainsboro; 
 }
 
@@ -143,7 +152,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   border-bottom : 2px solid  gainsboro; 
-  height : 220px ;  
+  height : 200px ;  
+  /* border: 1px solid red ; */
 } 
 
 .drag-input{
@@ -192,16 +202,19 @@
 
 
 .drop-file-input-label{
-    /* border : 1px solid blue ;  */
+    border : 1px solid blue ; 
     text-align: center;
-    font-weight: 600;
-    padding : 10px
+    font-size : 12px  ; 
+    font-weight: 300;
+    padding : 5px ; 
+    color : gray ; 
 }
 
 .drop-file-input-label img{
     /* border : 1px solid red ;  */
-    width : 100px ;
-    height :100px ; 
+    width : 70px ;
+    height :70px ; 
+    
 }
 
 .file-show{
@@ -248,9 +261,30 @@
     justify-content: space-around;
 }
 .clear-button-box button{
-    width : 40% ; 
+    width : 35% ; 
     height : 30px ; 
     margin-top: 10px;
     cursor: pointer;
 }
 
+.clear-button-box button:nth-child(2){
+    width : 55% ;
+}
+.submit-button{
+    width : 60%;  
+    margin : auto ; 
+    margin-top: 0px;
+    height : 100px ; 
+    /* border : 1px solid red ;  */
+}
+
+.submit-button Button:nth-child(1){
+    width : 200px ; 
+    margin-top: 30px;
+   
+}
+
+
+.submit-button Button:nth-child(3){
+    margin-top: 30px;
+}
