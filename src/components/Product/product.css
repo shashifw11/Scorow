@@ -1,0 +1,256 @@
+.tool-bar{
+    background-color:  #222f3e;
+    background-color: #fff ;
+    color : black ; 
+    display : flex ; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap : 1rem ; 
+    align-items: center;
+    padding : 1rem ; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.burger{
+    cursor: pointer;
+    font-size: 25px;
+} 
+.user-login{
+    width : 150px ; 
+    height : 40px ; 
+    /* border : 1px solid white ;  */
+    display : flex ; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.user-login span{
+    width : 60% ; 
+    text-align: center;
+    padding-top: 10px;
+    /* border : 1px solid white ;  */
+   
+}  
+
+.user-login div{
+    width : 28% ; 
+    height : 100% ; 
+    /* border : 1px solid white ;  */
+    border-radius : 50% ; 
+}
+
+.image{
+    width : 100% ;
+    height : 100% ; 
+    border-radius : 50% ; 
+    /* border : 1px solid white ;  */
+    color : white ; 
+    cursor: pointer;
+}
+
+.sidebar{
+    position : absolute ;
+    background-color:  #222f3e; 
+    color : #fff ; 
+    top : 0 ; 
+    left : 0; 
+    height : 100vh ; 
+    width  : 230px ; 
+    transform: translate(-100%);
+    transition : all 0.4s;
+}  
+
+.sidebar--open{
+    transform: translate(0%);
+}
+.sidebar li:nth-child(1){
+    padding : 1.5rem 2rem ; 
+    font-weight: 600;
+}
+
+.sidebar li{
+    list-style : none ; 
+    padding : 1rem 2rem ; 
+    border-bottom : solid rgba(255, 255, 255, 0.1) 1px ;
+    display : flex ; 
+    align-items: center ;
+    gap : 1rem ; 
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.sidebar li:hover{
+    background-color: #fff;
+    color :black ; 
+}
+
+.backdrop{
+    position : fixed ; 
+    top : 0 ;
+    left : 0  ; 
+    width : 100% ; 
+    height : 100vh ; 
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+}
+
+.backdrop--open{
+    display : block ; 
+}
+
+
+.form-container{
+    width : 70% ; 
+    margin-left: 18%;
+    /* border : 1px solid red  ;  */
+    height : 500px ; 
+}
+
+.input-field{
+    width : 50%;
+    height : 220px ;  
+    margin :left ;
+    /* border : 1px solid red ;  */
+} 
+
+.input-field input{
+    width : 90% ;  
+    padding : 12px ; 
+    margin: 15px ; 
+    border-radius : 5px ; 
+    border : 2px solid gainsboro ; 
+} 
+
+.input-field select{
+    width : 90% ; 
+    padding : 12px ; 
+    margin: 15px;
+    border-radius : 5px ;
+    border : 2px solid gainsboro ; 
+}
+
+.drag-box-container{
+    width : 100% ; 
+    height : 280px ; 
+    border : 1px solid  gainsboro; 
+}
+
+.box{
+    width : 100% ; 
+  display : flex ; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-bottom : 2px solid  gainsboro; 
+  height : 220px ;  
+} 
+
+.drag-input{
+     width : 30% ; 
+     height : 80% ; 
+     margin-top :25px;
+     /* border : 2px dashed gainsboro ;  */
+}
+
+
+.drag-input-box{
+    width : 100% ; 
+    height : 80% ; 
+    border : 2px dashed gainsboro ;
+} 
+
+ 
+.drop-file-input{
+    position :relative ; 
+    width : 100% ; 
+    height : 100% ; 
+    display : flex ; 
+    align-items: center;
+    justify-content: center;
+    /* border : 1px solid red ;  */
+   
+} 
+
+
+
+.drop-file-input input{
+   opacity : 0 ; 
+   position : absolute ;
+   top : 10 ; 
+   left : 0 ; 
+   width : 100% ; 
+   height : 100% ; 
+   cursor : pointer ; 
+}
+
+
+.drop-file-input:hover,
+.drop-file-input.draghover{
+    opacity : 0.6 ; 
+}
+
+
+.drop-file-input-label{
+    /* border : 1px solid blue ;  */
+    text-align: center;
+    font-weight: 600;
+    padding : 10px
+}
+
+.drop-file-input-label img{
+    /* border : 1px solid red ;  */
+    width : 100px ;
+    height :100px ; 
+}
+
+.file-show{
+    width : 80% ; 
+    /* border : 1px solid red ;  */
+    padding : 10px ; 
+    margin: 10px ;
+    background-color: burlywood; 
+}
+
+.drag-button-box{
+    width : 40% ; 
+    display : flex ; 
+    justify-content: center;
+    /* border : 1px solid red ;  */
+    float :right ; 
+   
+}
+
+.drag-input button{
+    border : none ; 
+     padding : 5px ; 
+     margin: 5px ; 
+     cursor: pointer ;
+     align-items: left; 
+}
+
+
+.discription-input{
+    width : 60% ; 
+    height : 80% ;
+    margin-top :25px;
+    overflow-y: scroll;
+    border : 2px dashed gainsboro ; 
+}
+
+.clear-button-box{
+    width : 30% ; 
+    height : 60px  ; 
+    float :  right ; 
+    /* border : 1px solid red ;  */
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+}
+.clear-button-box button{
+    width : 40% ; 
+    height : 30px ; 
+    margin-top: 10px;
+    cursor: pointer;
+}
+
