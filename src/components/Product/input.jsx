@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Dragdrop from './dragdrop';
 import {useState } from "react" ; 
 import Button from '@mui/material/Button';
+import BasicModal from './model/model';
 
 
 const Input = () => { 
@@ -13,15 +14,21 @@ const Input = () => {
       Name : "" , 
       Discription : "" , 
       Category : "" , 
-  })
-  //  console.log(product) ; 
-    console.log(listfile) ; 
+  }) 
+
+  const [productDetails, setProductDetails] = useState([]);
+      
 
    const handleChange = (e)=>{
          const {value , name} = e.target ; 
          setProduct( {...product ,[name] : value})
 
    } 
+
+   const saveChange = (item)=>{
+    setProductDetails([...productDetails , item])
+          // console.log(item)
+   }
    
 
    const onFileChange = (files)=>{
@@ -31,7 +38,7 @@ const Input = () => {
 
      const onSubmit = async (e)=>{
          e.preventDefault() ; 
-          const data = {product , listfile}
+          const data = {product , listfile , productDetails}
          try{
              const res = await fetch("http://localhost:8000/product" , {
                  method: 'POST', 
@@ -109,8 +116,9 @@ const Input = () => {
       </div>
     </div>
      <div className = "submit-button">
-      <Button variant="outlined">Add Product Details</Button><br/>
-      <Button onClick = {onSubmit} variant="contained">Submit</Button>
+       <BasicModal saveChange={saveChange}/>
+      <br/>
+      <Button onClick = {(item)=>onSubmit(item)} variant="contained">Submit</Button>
       </div>
     </>
   )

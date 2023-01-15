@@ -1,5 +1,24 @@
 {
   "product": [
-    
+    {
+      "product": {
+        "Name": "shirt",
+        "Discription": "large cotten shirt",
+        "Category": "cloth"
+      },
+      "listfile": [
+        {},
+        {},
+        {}
+      ],
+      "productDetails": [
+        {
+          "Part-Number": "cotten",
+          "Size": "large",
+          "Product-Count": "8"
+        }
+      ],
+      "id": 1
+    }
   ]
 }
